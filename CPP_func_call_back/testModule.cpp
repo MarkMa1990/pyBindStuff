@@ -52,7 +52,7 @@ void TestModule::setFunc(PyObject *callback)
 }
 
 
-void TestModule::test(double *x_t, int N_t)
+PyObject* TestModule::test(double *x_t, int N_t)
 {
     if (!callback_) {
         std::cerr << "No callback is set.\n";
@@ -66,9 +66,11 @@ void TestModule::test(double *x_t, int N_t)
         
         PyObject *result = PyObject_CallObject(callback_, args);
         if (result == NULL) std::cerr << "Callback call failed.\n";
-        else Py_DECREF(result);
-        Py_DECREF(args);
+//        else Py_DECREF(result);
+//        Py_DECREF(args);
+        return result;
     }
+    return NULL;
 
 }
 

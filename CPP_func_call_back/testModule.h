@@ -17,7 +17,7 @@ public:
 
     void _print();
 
-    void test(double *x_t, int N_t);
+    PyObject* test(double *x_t, int N_t);
 
 private:
 

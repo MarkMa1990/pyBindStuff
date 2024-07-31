@@ -21,12 +21,15 @@ tt._print()
 
 def func(data):
     for d in data:
-        print(d)
+        print(d+1)
+    return data
 
 tt.setFunc(func)
 
 print("set func done")
 print()
 
-tt.test(x2)
+y = tt.test(x2)
+print()
+print(y)
 
