@@ -22,7 +22,7 @@ tt._print()
 def func(data):
     for d in data:
         print(d+1)
-    return data
+    return data,d
 
 tt.setFunc(func)
 
