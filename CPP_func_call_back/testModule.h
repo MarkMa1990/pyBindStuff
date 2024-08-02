@@ -19,9 +19,14 @@ public:
 
     PyObject* test(double *x_t, int N_t);
 
+    void setFunc2(PyObject *callback);
+    PyObject* test2(double *x_t, int N_t);
+
 private:
 
     PyObject *callback_;
+
+    PyObject *callback2_;
 
     
 };
